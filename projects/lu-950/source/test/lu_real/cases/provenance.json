@@ -1,0 +1,42 @@
+{
+  "source": "User-provided Huawei October 950PR task materials",
+  "gpu_reference_files": [
+    {
+      "kind": "sgetrf",
+      "source": "task_materials/10\u6708\u793e\u533a\u4efb\u52a1-\u5355\u7cbe\u5ea6\u5b9e\u6570LU\u5206\u89e3\u3001\u6c42\u89e3\u548c\u6279\u91cf\u6c42\u9006(950)/sgetrf/bench_result.json",
+      "destination": "cases_sgetrf.json",
+      "cases": 148,
+      "missing_gpu_baseline": 0,
+      "original_sha256": "a16f97000fe7db6a5530e1c3277faf000009a9fcd9bee9cac9f355f4aac3f93e",
+      "packaged_sha256": "cb8f96a00fcee8f379e0dbb178147e0931eb3617fd299674b756ff995dcd383e"
+    },
+    {
+      "kind": "sgetri",
+      "source": "task_materials/10\u6708\u793e\u533a\u4efb\u52a1-\u5355\u7cbe\u5ea6\u5b9e\u6570LU\u5206\u89e3\u3001\u6c42\u89e3\u548c\u6279\u91cf\u6c42\u9006(950)/sgetri/bench_result.json",
+      "destination": "cases_sgetri.json",
+      "cases": 200,
+      "missing_gpu_baseline": 0,
+      "original_sha256": "9aa1a78d40f77c9fa75cf1dfcb07dfb640f814dff3bb733394eead04c82bf292",
+      "packaged_sha256": "8f6a7bf03c6eb33a61d7213f62227b12fcacef660e69f7a0492158d8a298a121"
+    },
+    {
+      "kind": "sgetribatched",
+      "source": "task_materials/10\u6708\u793e\u533a\u4efb\u52a1-\u5355\u7cbe\u5ea6\u5b9e\u6570LU\u5206\u89e3\u3001\u6c42\u89e3\u548c\u6279\u91cf\u6c42\u9006(950)/sgetribatched/bench_result.json",
+      "destination": "cases_sgetribatched.json",
+      "cases": 149,
+      "missing_gpu_baseline": 0,
+      "original_sha256": "e5cec516f1a23b578d83b1f9eb82e203aa102d8793db61adb784efb96b48f372",
+      "packaged_sha256": "829e552935442e7044a7e134e0ca570197ca763909498e7be61ded6fc0b39621"
+    },
+    {
+      "kind": "smatinvbatched",
+      "source": "task_materials/10\u6708\u793e\u533a\u4efb\u52a1-\u5355\u7cbe\u5ea6\u5b9e\u6570LU\u5206\u89e3\u3001\u6c42\u89e3\u548c\u6279\u91cf\u6c42\u9006(950)/smatinvbatched/bench_result.json",
+      "destination": "cases_smatinvbatched.json",
+      "cases": 215,
+      "missing_gpu_baseline": 2,
+      "original_sha256": "c9f9a9c19f3dd89a88179a1b6f2a80b9b5d1c5f8b881b5cbed86371e8026dafe",
+      "packaged_sha256": "4f9bc8c827d90aa9c84e5b695fbe7d0f62f8db972000aca5d9c114165b4784dc"
+    }
+  ],
+  "normalization": "Only the final LF is normalized for pre-commit; JSON values and every GPU baseline are unchanged."
+}

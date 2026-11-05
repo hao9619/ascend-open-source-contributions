@@ -1,0 +1,160 @@
+{
+  "captured_date": "2026-10-26",
+  "kind": "contribution source snapshot, not standalone build",
+  "local_git_base": "c1688c9d79735d29f4f764907f6821b8765db2c2",
+  "working_tree_changes_included": true,
+  "upstream": null,
+  "review_link": null,
+  "files": [
+    {
+      "path": "License",
+      "sha256": "b638cc8ca486ec24e2539a18ba7f8518934b09dc14a0e29f8e9a2caffb772720",
+      "bytes": 9185,
+      "origin": "upstream license/notice"
+    },
+    {
+      "path": "csrc/analysis/constant.h",
+      "sha256": "978a7574f99a9140d7ffc9d7ca0204c2a3a77aa5a1d48695ff4b2698cec76dbf",
+      "bytes": 8353,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/analysis/decompose_analyzer.cpp",
+      "sha256": "5a5ef22ebe08accf415be2faceed0cfe2a0c204d61d0cc74751741614bd22b51",
+      "bytes": 6846,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/analysis/event.h",
+      "sha256": "d221cfec79954cf873565e01487d332a877a9ddd357be666738438938f578c73",
+      "bytes": 8410,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/analysis/inefficient_analyzer.cpp",
+      "sha256": "33aeaeb33602311a4c03f3221e83d3949206589bb79712c4adf4487d3373cce2",
+      "bytes": 11881,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/event_report.h",
+      "sha256": "4a1e4511822fae76d43e7f7c122d2115f8988781075a4e5e72fc26b37831a613",
+      "bytes": 18292,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/kernel_hooks/driver_prof_api.cpp",
+      "sha256": "59c04dfad7778f89f899765bd7da9c4c33cfc9263999fc6768670a79faa148bd",
+      "bytes": 7503,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/kernel_hooks/driver_prof_api.h",
+      "sha256": "d6be0f07d22501aa1d7b67d6433883f5f18a50b30a5d77cb4d1dda783f2cd6ba",
+      "bytes": 5653,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/kernel_hooks/kernel_event_trace.cpp",
+      "sha256": "b32033d3e7251f285d66067617b45fa8ee0b0c2bf70fb5d579872a75fbba846d",
+      "bytes": 11853,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/kernel_hooks/runtime_hooks.cpp",
+      "sha256": "facba6be7b60b8fa2758a67d16baf7e3ec1462ff714a04131c52caaa0f31228d",
+      "bytes": 10896,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/kernel_hooks/runtime_prof_api.cpp",
+      "sha256": "ed4bcbbe4b82bc51461a420c9793d2922fb4bc0931e6322840805f6e0737f6b0",
+      "bytes": 5035,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/mstx_hooks/mstx_manager.cpp",
+      "sha256": "68b7a04e5d5ccfb12eabfbb9b31ec66938a7075ac43eb6da9ed336571ce76bc1",
+      "bytes": 7273,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/trace_manager/event_trace_manager.cpp",
+      "sha256": "1c0fad6c7ab8c8c0eef37fe174849da13a384ccf2eeed88440b7e3f77c013292",
+      "bytes": 14985,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "csrc/event_trace/triton_report.cpp",
+      "sha256": "fe944b91e27e689c8ed827a6ab1ec5e05471e0d7bd4a7175866d185ae2a1b26c",
+      "bytes": 5659,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "example/triton/triton_example.py",
+      "sha256": "fc127002f97d01f2ee96f33e014b7ea8e24b6b778633a527121bb772956e9e78",
+      "bytes": 1515,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "python/msmemscope/analyzer/inefficient.py",
+      "sha256": "6fcc0b910c274663110574edae8692c2c742c509fa1669cbd0dc080c501b50b0",
+      "bytes": 27331,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "python/msmemscope/triton_access.py",
+      "sha256": "4a852ba86c2f34479d89a69d45460d187c3d95527c06bc1581d903152ae7a20b",
+      "bytes": 7715,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "python/msmemscope/triton_collection.py",
+      "sha256": "412859db75ecb2360545459bf59767a58f38d83c47b76faf7dbf44742a426e90",
+      "bytes": 9399,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/event_trace/test_triton_report.cpp",
+      "sha256": "569c0c041aa2e7ad76421449e7c0fcadb56fd4cb0d570c89a4e959f5b47348fb",
+      "bytes": 2529,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/triton/check_native_filters.py",
+      "sha256": "03576aebedec533bf780fa585ffa02af30025eaada3fd3d123511caa95ee0c7a",
+      "bytes": 2071,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/triton/test_acceptance_cases.py",
+      "sha256": "58fcf29c865a0807f942dc57023c5b67ba5e8ed5e8be10bcaa6c103b7445621e",
+      "bytes": 5339,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/triton/test_native_filters.py",
+      "sha256": "69a4b92368d5acfbd2226a07129dab680b41abe1c423bd58544705b79ee68c59",
+      "bytes": 1958,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/triton/test_npu_collection.py",
+      "sha256": "565d6aee1c1387096f30cb73c27b3bf2a216d52d28296e6160174a39bfd6b866",
+      "bytes": 4169,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/unit_python/test_triton_collection.py",
+      "sha256": "ba55c86a8646f7f9a62be73e2653d8fdc1486887fe86d0375770ab76cfc8da7c",
+      "bytes": 4626,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/unit_python/test_triton_effect_safety.py",
+      "sha256": "32fb36117540dfb8ff5ab43b73bcd41645f039caa0a8431e030ac2b1fd992627",
+      "bytes": 3631,
+      "origin": "local working-tree contribution file"
+    }
+  ]
+}

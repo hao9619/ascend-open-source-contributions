@@ -1,0 +1,238 @@
+{
+  "captured_date": "2026-10-26",
+  "kind": "contribution source snapshot, not standalone build",
+  "local_git_base": "0465b1bc8317a5a41687621edd2adfbd388fbb85",
+  "working_tree_changes_included": true,
+  "upstream": "https://gitcode.com/cann/ops-blas",
+  "review_link": "https://gitcode.com/cann/ops-blas/pull/599",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "cb282ac2b66d7d6734c3fb354db792b28cf23ab29fbc16d5cfd8bd542bedeb1e",
+      "bytes": 5278,
+      "origin": "upstream license/notice"
+    },
+    {
+      "path": "OAT.xml",
+      "sha256": "eaac850d0ecf9eb95233631189069348f9ea66d25eabf253d0ba70240e4ec343",
+      "bytes": 7533,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/README.md",
+      "sha256": "94b6b66422668351cb5736fb4440d63ad3f4e45d15b42473a1bf9cf360058280",
+      "bytes": 7333,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/README.md",
+      "sha256": "1fd2cacce99bc9b3f9c6f9095291da7d2a4a82f13db8ae6676539e9bc93d40d4",
+      "bytes": 5056,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_classify.h",
+      "sha256": "e4ea0ff77226df7b2f31ab863bb17ac2ef5d80873f4174888ca2cc80f31ad92e",
+      "bytes": 3159,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_combine_buffers.h",
+      "sha256": "d3ee0abb6b61d6d191ce1085b35aa00a720ed562c669507320ebd320b0618c0a",
+      "bytes": 2206,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_combine_chunk.h",
+      "sha256": "dd2f7809fe62af2a6bf0a6de700822efecf81733fd6cec2daadfc6b48f25bc15",
+      "bytes": 2348,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_compact_kernel.cpp",
+      "sha256": "336155a4269aec7274b95ea3de05e80d9ac62442dee3f7b22c356b69e2522338",
+      "bytes": 4511,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_device_imports.h",
+      "sha256": "8dc1e58f6660c7f3488746e816d89e23a94f521e9fd1aeeea24205ae7adce975",
+      "bytes": 1258,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_host.cpp",
+      "sha256": "e15a3ccc85d7eaabfecb1081661ac1ccc91877064b121ae5235fb5c1a0607900",
+      "bytes": 21968,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_kernel.cpp",
+      "sha256": "fe652615bef74c0a483379ccdeabe48943c22251b336b3c0f8e42a5c13930737",
+      "bytes": 15748,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_kernel.h",
+      "sha256": "8aef1c99bcc94ac95a509e2a6669130d3d8884ea77a8dd63b1ac6f4509a5efe3",
+      "bytes": 2690,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_ordered.h",
+      "sha256": "c13672f130519cdabd96b01c2a77cda28f2b59929e82e6e6e22675866d8da50b",
+      "bytes": 8278,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_ordered_core.h",
+      "sha256": "179adfe15f94616bbd76d4c3c798023933779cfc6994f20706dee47298f190f9",
+      "bytes": 8808,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_ordered_edge.h",
+      "sha256": "68cc163d343523e3f4e48b7ec6257a8b9aab78927740eafaa405bacdbb33dc4b",
+      "bytes": 7656,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_ordered_element.h",
+      "sha256": "d2c99b8acb424da0d12d8ccf7db9fac94cb2caab2701eef958ace718fbbc17d2",
+      "bytes": 1454,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_ordered_guard.h",
+      "sha256": "f5c3bfa46fb68f0d69e909f4f7fcc50fcbba25963c8b18f461a25b0d0cbbce9f",
+      "bytes": 1860,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_ordered_math.h",
+      "sha256": "173b53eb5aedcb3cce2277bdaa83a7fe3142da4d8ee466a94b849110bdaf5506",
+      "bytes": 7825,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_pack_base.h",
+      "sha256": "8f0d8d992435fa61e3f7866d413d8faf7e0894520cb38ff2697aa9bae891e75a",
+      "bytes": 3991,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_pack_column.h",
+      "sha256": "1f9ba06575b6131745460bafa8a3e755ddebfe54d8db45a6dd543b55cbd3b6ab",
+      "bytes": 2545,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_pack_pair.h",
+      "sha256": "1ed8c33276ec42c225eae060796fbc7e90a8c873afe065f684de49ea537b738f",
+      "bytes": 1456,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_pack_risk.h",
+      "sha256": "24a8250f851218c41109ec91331cb2cf5c0dd641a20d097ab931efe9ba07a494",
+      "bytes": 1861,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_pack_triple.h",
+      "sha256": "bbb87f459fbd68f10364bbfdd344824e4921caad44a80a43366a1f804ed95739",
+      "bytes": 8664,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_small_vector.h",
+      "sha256": "05213b47ef1c5e521b2de4d30047d458149914ef98d50adaa854820b0a623ad6",
+      "bytes": 12350,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/ctrmm_tiling_data.h",
+      "sha256": "582047bf65400c2611d25aa1a43697e82c9f41775703cf324f82bcc43f532db0",
+      "bytes": 1566,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/repair_packed.h",
+      "sha256": "8b89b195ec31a4697531fc8e3215ed36471d113354bf233df017caaf603385e3",
+      "bytes": 12864,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/trmm/arch22/sum_kernel.h",
+      "sha256": "4cd6e5433f4fa3e101b2bab064c6484daa3f27f8ccdcbbd8aba2d3d7a227245b",
+      "bytes": 1936,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "build.sh",
+      "sha256": "6da76a56e1cb2712860da66347491b8e1910fc846028d2f4891827c4be682573",
+      "bytes": 21748,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "include/cann_ops_blas.h",
+      "sha256": "49ca36886e008637b43e793fc272028d9599cbaa23a1393d57772d4f13252f3c",
+      "bytes": 30978,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "scripts/ci/changed_header_ops.py",
+      "sha256": "f452a549fa5d05ae39d3e8639c85658aa1982b670a8784b5edda6e1f51582a10",
+      "bytes": 5405,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "scripts/ci/run_example.sh",
+      "sha256": "b2b751736fce3866353cad19c342da2f1a667c3f89c228d652d95c9765af56d7",
+      "bytes": 10080,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/trmm/ctrmm/CMakeLists.txt",
+      "sha256": "7313d973477d77b57f68a7c37fb38349e6eb199350bcb432568665fb91585b08",
+      "bytes": 683,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/trmm/ctrmm/README.md",
+      "sha256": "404184dc788033b7da9c7ee4819cee5dfd03ebbea92109a3754ac3ab9db7d25c",
+      "bytes": 2907,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/trmm/ctrmm/arch22/ctrmm_npu_wrapper.h",
+      "sha256": "6f3c4acfbc794884f2442b2a6c153c53592fa37bda2e1f2cb3962e170f5c3c59",
+      "bytes": 2661,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/trmm/ctrmm/arch22/ctrmm_numeric_diagnostic.h",
+      "sha256": "f17687e1b713a963119663fe023c5e4f21a424f6b42809127369f22bbb24eb87",
+      "bytes": 5141,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/trmm/ctrmm/arch22/ctrmm_test.cpp",
+      "sha256": "daaefb35b9f045e28a6eeba152f3a7e602c0fa4adaa8bf003d53278dc7e42a35",
+      "bytes": 11307,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/trmm/ctrmm/ctrmm_golden.h",
+      "sha256": "6e490097f64f18d5f21f89dad8c82547b201f26059886246816b1b37ee884207",
+      "bytes": 1570,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/trmm/ctrmm/ctrmm_param.h",
+      "sha256": "530d0e7bf29d572be84a62f24891921b5e5a8c2b808935e4b0da58f24dc12657",
+      "bytes": 2171,
+      "origin": "local working-tree contribution file"
+    }
+  ]
+}

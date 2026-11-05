@@ -1,0 +1,244 @@
+{
+  "captured_date": "2026-10-26",
+  "kind": "contribution source snapshot, not standalone build",
+  "local_git_base": "42eb075b91f2ef5f71a25f0b6a9144f414390ba6",
+  "working_tree_changes_included": true,
+  "upstream": "https://gitcode.com/cann/ops-collections",
+  "review_link": "https://gitcode.com/cann/ops-collections/pull/50",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "5394aa290d99863ab5a50503063146c2f77bfd5862796a3a6be57f8479dd08eb",
+      "bytes": 4491,
+      "origin": "upstream license/notice"
+    },
+    {
+      "path": "Third_Party_Open_Source_Software_Notice",
+      "sha256": "4a48cfe9618f8ead03f8e451da0919c25ebca667a535975e68ddc7d2cc45a087",
+      "bytes": 26282,
+      "origin": "upstream license/notice"
+    },
+    {
+      "path": "include/detail/static_multiset/kernels.h",
+      "sha256": "fea44f602f5d7cdb7bdac9873233d12552cfd5190011b211c08743d35280750d",
+      "bytes": 10402,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "include/static_multiset.h",
+      "sha256": "571c9fcce9171bf24c1b23fe828b0514bfa7923b675f30d89fd9246f245216aa",
+      "bytes": 13801,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "include/static_multiset_ref.h",
+      "sha256": "690f147b048d2ecb62618f2f4a1a37cd2c11ff1159f8e40cf9a68cbc5f4e3a54",
+      "bytes": 4520,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "scripts/build_static_multiset.sh",
+      "sha256": "277355b92bf8cdd8f4a31c8f3fd8ebf09be35e9e2d71db8bb80a4aad91dffab6",
+      "bytes": 2010,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "scripts/check_static_multiset_memory.sh",
+      "sha256": "ec88fdb259f675315d16106e0c49b955a65dd5eff7c3589567195ea8e89feac8",
+      "bytes": 1336,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "scripts/report_static_multiset.py",
+      "sha256": "1505d591c04028f40191bcb1cf3a94a328f7e54661c19b73f90061e7c6cd22cf",
+      "bytes": 2631,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/CMakeLists.txt",
+      "sha256": "84a52ea41e4c46a475a212ed4db8a730fe746152b5bc5fd05cf47fcf40762317",
+      "bytes": 5934,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/common/acl_env.h",
+      "sha256": "46ee2f64f29c5128ab8b17bb9fe26f8480c0a77014a725b8194cca99d8ef04f4",
+      "bytes": 3118,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/common/multi_container_test_common.h",
+      "sha256": "fc385ab906ce5cbae65b77d65ea77916871e59c5bbb542b28195b9a2c11fbab1",
+      "bytes": 6140,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/baselines.json",
+      "sha256": "c0c29cb6a27656c09bfddaab342e3aa62a693e485ed75ec2e27cee6712fcdb80",
+      "bytes": 15458,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/benchmark_common.h",
+      "sha256": "c18de0b31c7bdd7cc31c6427e137c680c184af68e51955a8373a2771f951e977",
+      "bytes": 5458,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_contains.cpp",
+      "sha256": "8a17d49c5aa71aa389da0b3cdf59eed106dc5dc6da4f8e661c2bcb240554e177",
+      "bytes": 2614,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_count.cpp",
+      "sha256": "6ada8813fad16569b208f060b406d1c2042e1fe9e0c60c2057bf1bd0d4446b9d",
+      "bytes": 3094,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_count_each.cpp",
+      "sha256": "1a4153843965bf964eaebaeb2662af8c6933ea680177097faff1569baa17e992",
+      "bytes": 3224,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_count_each_outer.cpp",
+      "sha256": "5aeb7ef5521b2a516c9f6b2ed190071025b728a93394a1d459e090e5790a5632",
+      "bytes": 3296,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_create.cpp",
+      "sha256": "ce141d18ca9256a59fe029c9d269e0fc9f7c9baabcdfeb23506c80460e1de847",
+      "bytes": 2022,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_destroy.cpp",
+      "sha256": "128fa571ce86ad82dc1df660f1696b6f3ba4be6a9caa10586d16385415137437",
+      "bytes": 2001,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_find.cpp",
+      "sha256": "a232786b0ea6a013e99490c9be95a40061156bc6ce15af0bb682072410acc7cc",
+      "bytes": 2549,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_insert.cpp",
+      "sha256": "48d6ee471c2b835ddad97a728c690d38a81a1dbd9498c3ff7a33e08c09863bb0",
+      "bytes": 2574,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_retrieve.cpp",
+      "sha256": "4cea5e96df9bc3656f509a09ce274be7f764ad02e40ffc0a843643f1622bb92d",
+      "bytes": 3375,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/performance/static_multiset/perf_retrieve_all.cpp",
+      "sha256": "7b854de9cebe9a878558cb336d1c27037719d373e948754b3dd72a738d036fc0",
+      "bytes": 2711,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/case_common.h",
+      "sha256": "83d18f2e0a5abb53dbd02aae7f3ad449cf462bafc09562e607954f335cfbe714",
+      "bytes": 5300,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/clear_test.cpp",
+      "sha256": "6c4a016b3ec6828893fc654ea07f75a3e18b8f651205525a1f835033ba57668b",
+      "bytes": 2180,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/contains_if_test.cpp",
+      "sha256": "3cad925189470ce0a1ac4a98618bf33616212dd7f649adc532ba8042513c33ba",
+      "bytes": 2554,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/contains_test.cpp",
+      "sha256": "e1790b36d74824f40909f55abcfcf81a443f933d872ec39bdb9f7a6752e49fa2",
+      "bytes": 2959,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/count_each_outer_test.cpp",
+      "sha256": "5ff71eac9f6e61fb3dddb4a4a1503bc5c510da2f3bc070d0ac024af9191a3ce8",
+      "bytes": 2019,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/count_each_test.cpp",
+      "sha256": "a6df765edf9495240881d7c575b7fd5db73a6db7f02712aa9f24accb0fa66f73",
+      "bytes": 1958,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/count_test.cpp",
+      "sha256": "f6ec69e394fa558b992660c61b27539ebc4ae977c4f290eb5e4555a7916c6b0b",
+      "bytes": 2516,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/create_test.cpp",
+      "sha256": "1174d799ec1800b370e26ce76dae393c4d955ee545bdd947b0a5b553a5936ed3",
+      "bytes": 1760,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/destroy_test.cpp",
+      "sha256": "c91918989d4e8fd8b44909f0be71e7f0f6f9410d52ae66bf218240eca72e3a30",
+      "bytes": 1719,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/find_if_test.cpp",
+      "sha256": "7e8781a1ec7ba707b7f98013809cecbf0f3b9ec470f705c903c1241fc228fdda",
+      "bytes": 2530,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/find_test.cpp",
+      "sha256": "6afbe55486a28bb2954fb0cb5ba6bfbdb73c06c8435bd15dc647441a940e82d9",
+      "bytes": 2950,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/insert_if_test.cpp",
+      "sha256": "c817401d6136c750bbb211445abb5e476facfdc9db99cf498eb0b36f84e7ed86",
+      "bytes": 2987,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/insert_test.cpp",
+      "sha256": "4d6094d8cee4072034638e9992a5cc7b277e7794791c9f72771e262d8cd540a4",
+      "bytes": 3352,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/regression_test.cpp",
+      "sha256": "fe4e20fd667fc5ad930253c9706efffe5f2631baf90ae96ebb67fd4958173706",
+      "bytes": 8758,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/retrieve_all_test.cpp",
+      "sha256": "5feb2f05170c768066246f993af4d73c3d1d4b34dc1142b279ae3cc70b24f480",
+      "bytes": 2633,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "tests/static_multiset/retrieve_test.cpp",
+      "sha256": "98aa224f25f1cfdd63af0f37ebbf22852659587eb1631f41c6d4284f0043ec6c",
+      "bytes": 2487,
+      "origin": "local working-tree contribution file"
+    }
+  ]
+}

@@ -1,0 +1,634 @@
+{
+  "source": "static_multiset_task_doc.md, section 3.3",
+  "source_sha256": "a2385d92d00e0ca6373ce41daff9ae472305ebaf5d61c87ab53add708464939f",
+  "rows": [
+    {
+      "op": "create",
+      "dtype": "I32",
+      "matching_rate": null,
+      "baseline_ms": 4.152062,
+      "parameters": {
+        "Key": "I32",
+        "Capacity": "100000000",
+        "标杆时延（ms）": "4.152062"
+      }
+    },
+    {
+      "op": "create",
+      "dtype": "I64",
+      "matching_rate": null,
+      "baseline_ms": 8.74013,
+      "parameters": {
+        "Key": "I64",
+        "Capacity": "100000000",
+        "标杆时延（ms）": "8.740130"
+      }
+    },
+    {
+      "op": "destroy",
+      "dtype": "I32",
+      "matching_rate": null,
+      "baseline_ms": 4.360688,
+      "parameters": {
+        "Key": "I32",
+        "Capacity": "100000000",
+        "标杆时延（ms）": "4.360688"
+      }
+    },
+    {
+      "op": "destroy",
+      "dtype": "I64",
+      "matching_rate": null,
+      "baseline_ms": 8.5802,
+      "parameters": {
+        "Key": "I64",
+        "Capacity": "100000000",
+        "标杆时延（ms）": "8.580200"
+      }
+    },
+    {
+      "op": "count_each",
+      "dtype": "I32",
+      "matching_rate": 0.1,
+      "baseline_ms": 4.874588,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "4.874588"
+      }
+    },
+    {
+      "op": "count_each",
+      "dtype": "I32",
+      "matching_rate": 0.5,
+      "baseline_ms": 5.131703,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "5.131703"
+      }
+    },
+    {
+      "op": "count_each",
+      "dtype": "I32",
+      "matching_rate": 1.0,
+      "baseline_ms": 5.407013,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "5.407013"
+      }
+    },
+    {
+      "op": "count_each",
+      "dtype": "I64",
+      "matching_rate": 0.1,
+      "baseline_ms": 5.054034,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "5.054034"
+      }
+    },
+    {
+      "op": "count_each",
+      "dtype": "I64",
+      "matching_rate": 0.5,
+      "baseline_ms": 5.317555,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "5.317555"
+      }
+    },
+    {
+      "op": "count_each",
+      "dtype": "I64",
+      "matching_rate": 1.0,
+      "baseline_ms": 5.596096,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "5.596096"
+      }
+    },
+    {
+      "op": "count_each_outer",
+      "dtype": "I32",
+      "matching_rate": 0.1,
+      "baseline_ms": 5.265664,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "5.265664"
+      }
+    },
+    {
+      "op": "count_each_outer",
+      "dtype": "I32",
+      "matching_rate": 0.5,
+      "baseline_ms": 5.521189,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "5.521189"
+      }
+    },
+    {
+      "op": "count_each_outer",
+      "dtype": "I32",
+      "matching_rate": 1.0,
+      "baseline_ms": 5.788201,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "5.788201"
+      }
+    },
+    {
+      "op": "count_each_outer",
+      "dtype": "I64",
+      "matching_rate": 0.1,
+      "baseline_ms": 5.443966,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "5.443966"
+      }
+    },
+    {
+      "op": "count_each_outer",
+      "dtype": "I64",
+      "matching_rate": 0.5,
+      "baseline_ms": 5.708848,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "5.708848"
+      }
+    },
+    {
+      "op": "count_each_outer",
+      "dtype": "I64",
+      "matching_rate": 1.0,
+      "baseline_ms": 5.980948,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "5.980948"
+      }
+    },
+    {
+      "op": "retrieve_all",
+      "dtype": "I32",
+      "matching_rate": null,
+      "baseline_ms": 0.660264,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "0.660264"
+      }
+    },
+    {
+      "op": "retrieve_all",
+      "dtype": "I64",
+      "matching_rate": null,
+      "baseline_ms": 1.016854,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "1.016854"
+      }
+    },
+    {
+      "op": "contains",
+      "dtype": "I32",
+      "matching_rate": 0.1,
+      "baseline_ms": 4.580408,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "4.580408"
+      }
+    },
+    {
+      "op": "contains",
+      "dtype": "I32",
+      "matching_rate": 0.5,
+      "baseline_ms": 4.310301,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "4.310301"
+      }
+    },
+    {
+      "op": "contains",
+      "dtype": "I32",
+      "matching_rate": 1.0,
+      "baseline_ms": 3.855939,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "3.855939"
+      }
+    },
+    {
+      "op": "contains",
+      "dtype": "I64",
+      "matching_rate": 0.1,
+      "baseline_ms": 4.755204,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "4.755204"
+      }
+    },
+    {
+      "op": "contains",
+      "dtype": "I64",
+      "matching_rate": 0.5,
+      "baseline_ms": 4.47062,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "4.470620"
+      }
+    },
+    {
+      "op": "contains",
+      "dtype": "I64",
+      "matching_rate": 1.0,
+      "baseline_ms": 4.000158,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "4.000158"
+      }
+    },
+    {
+      "op": "retrieve",
+      "dtype": "I32",
+      "matching_rate": 0.1,
+      "baseline_ms": 8.770419,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.1",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "8.770419"
+      }
+    },
+    {
+      "op": "retrieve",
+      "dtype": "I32",
+      "matching_rate": 0.5,
+      "baseline_ms": 9.140261,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.5",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "9.140261"
+      }
+    },
+    {
+      "op": "retrieve",
+      "dtype": "I32",
+      "matching_rate": 1.0,
+      "baseline_ms": 10.457202,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "1",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "10.457202"
+      }
+    },
+    {
+      "op": "retrieve",
+      "dtype": "I64",
+      "matching_rate": 0.1,
+      "baseline_ms": 9.133619,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.1",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "9.133619"
+      }
+    },
+    {
+      "op": "retrieve",
+      "dtype": "I64",
+      "matching_rate": 0.5,
+      "baseline_ms": 9.532203,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.5",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "9.532203"
+      }
+    },
+    {
+      "op": "retrieve",
+      "dtype": "I64",
+      "matching_rate": 1.0,
+      "baseline_ms": 10.845923,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "1",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "10.845923"
+      }
+    },
+    {
+      "op": "count",
+      "dtype": "I32",
+      "matching_rate": 0.1,
+      "baseline_ms": 4.196007,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "4.196007"
+      }
+    },
+    {
+      "op": "count",
+      "dtype": "I32",
+      "matching_rate": 0.5,
+      "baseline_ms": 4.435138,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "4.435138"
+      }
+    },
+    {
+      "op": "count",
+      "dtype": "I32",
+      "matching_rate": 1.0,
+      "baseline_ms": 4.68447,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "4.684470"
+      }
+    },
+    {
+      "op": "count",
+      "dtype": "I64",
+      "matching_rate": 0.1,
+      "baseline_ms": 4.508944,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "4.508944"
+      }
+    },
+    {
+      "op": "count",
+      "dtype": "I64",
+      "matching_rate": 0.5,
+      "baseline_ms": 4.758779,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "4.758779"
+      }
+    },
+    {
+      "op": "count",
+      "dtype": "I64",
+      "matching_rate": 1.0,
+      "baseline_ms": 5.010463,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "5.010463"
+      }
+    },
+    {
+      "op": "find",
+      "dtype": "I32",
+      "matching_rate": 0.1,
+      "baseline_ms": 4.977099,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "4.977099"
+      }
+    },
+    {
+      "op": "find",
+      "dtype": "I32",
+      "matching_rate": 0.5,
+      "baseline_ms": 4.765909,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "4.765909"
+      }
+    },
+    {
+      "op": "find",
+      "dtype": "I32",
+      "matching_rate": 1.0,
+      "baseline_ms": 4.33286,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "4.332860"
+      }
+    },
+    {
+      "op": "find",
+      "dtype": "I64",
+      "matching_rate": 0.1,
+      "baseline_ms": 5.251019,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.1",
+        "标杆时延（ms）": "5.251019"
+      }
+    },
+    {
+      "op": "find",
+      "dtype": "I64",
+      "matching_rate": 0.5,
+      "baseline_ms": 5.027173,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "0.5",
+        "标杆时延（ms）": "5.027173"
+      }
+    },
+    {
+      "op": "find",
+      "dtype": "I64",
+      "matching_rate": 1.0,
+      "baseline_ms": 4.571797,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIQUE",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "MatchingRate": "1",
+        "标杆时延（ms）": "4.571797"
+      }
+    },
+    {
+      "op": "insert",
+      "dtype": "I32",
+      "matching_rate": null,
+      "baseline_ms": 8.0981,
+      "parameters": {
+        "Key": "I32",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "8.098100"
+      }
+    },
+    {
+      "op": "insert",
+      "dtype": "I64",
+      "matching_rate": null,
+      "baseline_ms": 8.392043,
+      "parameters": {
+        "Key": "I64",
+        "Distribution": "UNIFORM",
+        "NumInputs": "100000000",
+        "Occupancy": "0.5",
+        "Multiplicity": "1",
+        "标杆时延（ms）": "8.392043"
+      }
+    }
+  ]
+}

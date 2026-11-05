@@ -1,0 +1,58 @@
+{
+  "captured_date": "2026-10-26",
+  "kind": "contribution source snapshot, not standalone build",
+  "local_git_base": "617bb065849dc60fbc543c364dcf36f6e7660905",
+  "working_tree_changes_included": true,
+  "upstream": "https://gitcode.com/cann/ops-blas",
+  "review_link": "https://gitcode.com/cann/cann-ops-competitions/pull/2067",
+  "files": [
+    {
+      "path": "LICENSE",
+      "sha256": "cb282ac2b66d7d6734c3fb354db792b28cf23ab29fbc16d5cfd8bd542bedeb1e",
+      "bytes": 5278,
+      "origin": "upstream license/notice"
+    },
+    {
+      "path": "blas/gemm_grouped_batched/README.md",
+      "sha256": "2d67179a8725848f6ee5166480f18274e0c3d7e063ebf38c2eaa9d287f816da7",
+      "bytes": 7643,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/gemm_grouped_batched/arch22/gemm_grouped_batched_host.cpp",
+      "sha256": "bde530bc61eaf8e6c95eb38d04f79917ee511eba660f8ca3d782e2d777157932",
+      "bytes": 19154,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/gemm_grouped_batched/arch22/gemm_grouped_batched_kernel.cpp",
+      "sha256": "25915198e3728c15f2f425c66114ebeaaa673521196fc6f1c5673bd69da23aa2",
+      "bytes": 33622,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "blas/gemm_grouped_batched/arch22/gemm_grouped_batched_tiling.h",
+      "sha256": "076cc098c7f12be08450e6957df55b4669222f23adde8bf2a1592ea5484e4828",
+      "bytes": 2166,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/gemm_grouped_batched/CMakeLists.txt",
+      "sha256": "4527c20f2d5dc00db87fa6b15b13b4d632f1f17b5d5d66b5fb4d354c830e2623",
+      "bytes": 1487,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/gemm_grouped_batched/arch22/README.md",
+      "sha256": "0cffebfa9bfb1123ec6a30fc0d0f1315195c4cc0dca0ae1d4ab2f219f426ae21",
+      "bytes": 2648,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/gemm_grouped_batched/arch22/gemm_grouped_batched_test.cpp",
+      "sha256": "414615262ac01adbfc8e1d624d3d0f18fb084d09e883065c979bb945e3fef391",
+      "bytes": 30578,
+      "origin": "local working-tree contribution file"
+    }
+  ]
+}

@@ -1,0 +1,502 @@
+{
+  "captured_date": "2026-10-26",
+  "kind": "contribution source snapshot, not standalone build",
+  "local_git_base": "b0a2247317f7a1f01341b247c8fa5d7d9d9d7e2e",
+  "working_tree_changes_included": true,
+  "upstream": "https://gitcode.com/cann/ops-solver",
+  "review_link": "https://gitcode.com/cann/ops-solver/pull/106",
+  "files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "f5e8edb610347eb86b3cd533e3c072a62ed303cb4303dcc44a5b09801d29d8f1",
+      "bytes": 5306,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "6077c058dd76db867c19e2ec973768a0771c7241085077d77dd22d87f5b05dee",
+      "bytes": 5276,
+      "origin": "upstream license/notice"
+    },
+    {
+      "path": "OAT.xml",
+      "sha256": "d479fbad90910c96002b372e2dd286f9d7983b5cdfe7b9d2583160efd7698646",
+      "bytes": 7096,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "_typos.toml",
+      "sha256": "931beb65ac35a5de15488e5dde1ab958c0a36cc7e6a449f1429aaf96aae14c1f",
+      "bytes": 1012,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "include/cann_ops_solver.h",
+      "sha256": "8a1f2033cdaa25cd147d012decd3107dd3b963eed66a06bf97f0efa60f775a7d",
+      "bytes": 11755,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "scripts/oat_check.sh",
+      "sha256": "13e18bd6b593f45f19a502e038a88022071bfa6c1af0e3fd3b8804cbac961046",
+      "bytes": 20330,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/CMakeLists.txt",
+      "sha256": "6a271e2db52b8a54418bc1e46d40afc7a1860de662820b1ddbaa19aa6bf59f98",
+      "bytes": 2399,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_factor_crout10.hpp",
+      "sha256": "2d1d424b865ddb37485771be7343c3c69d871e787ba347666be2c632b5ae423b",
+      "bytes": 10947,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_factor_vector.hpp",
+      "sha256": "d605093d04f2ace10c66be4434cfaaa87c027730cb1cb58f56bd943196a86ddd",
+      "bytes": 9368,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_fused.hpp",
+      "sha256": "02af75d6ee5516888e6de4454d60ba97aaa8bc83107750b0191ebf68a9dda234",
+      "bytes": 14271,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_high_kernel.cpp",
+      "sha256": "556edd97e14051acd98710c32dd18e81ac4328a3a2cfd8e575750e4a1f5b14a9",
+      "bytes": 2143,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_host.cpp",
+      "sha256": "39d2643cb797d6babb4904ab3e308f6b28700124d3bc2d8eac7371d648633013",
+      "bytes": 4631,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_kernel.cpp",
+      "sha256": "bccbd3ffcfccab689572bb3e9be28579d4bf4b5e6bb026ab96dd6655cad442ca",
+      "bytes": 18208,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_lapack.hpp",
+      "sha256": "b3f1e01edb0d775a3992ec462f42765814647447f5d200838a06a5b7a2939a05",
+      "bytes": 8017,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_medium_kernel.cpp",
+      "sha256": "a518bcb25b5efd7070b52c999ef2760335e06b1c6946e89a05a0a76922663852",
+      "bytes": 1693,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_medium_tiled.hpp",
+      "sha256": "db8d39c3334f99c58bd11ab776fd77e8a3ca1a122b5723889c0fbbd55da957e6",
+      "bytes": 12994,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_n16_tiled.hpp",
+      "sha256": "c6e915ae4c80a7bec9ae19be75ff6049cc5532db5dcaa7fd65234b989ea45243",
+      "bytes": 6695,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_n2.hpp",
+      "sha256": "9dc1e7cc1d6c46daef5461fe52173ffa83debd079d0445d115da2141817c79e2",
+      "bytes": 13158,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_n4.hpp",
+      "sha256": "dce19172e1d8e60bda54d16952609bfe45909eee8b0abd22b4de85ff40829a2f",
+      "bytes": 13272,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_n4_dense.hpp",
+      "sha256": "283f088402c9d72faf1d26d3e1bcff7d777b41bb1be0aa1a918737ba26fa2fee",
+      "bytes": 23882,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_n8_packed.hpp",
+      "sha256": "e13c9bae043cc2af481ebcc79e4680e31acf1ab65830fa41a0e35045083c9804",
+      "bytes": 35781,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_register_dense.hpp",
+      "sha256": "d2b6c26aab249f501ab5e95b867e0a5400c30594da343c4b75dcd3ba83687283",
+      "bytes": 9394,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_getri_small.hpp",
+      "sha256": "eae7a7485f06b4f96976d21145b3a12b973ba6a67958106090f3f67613b0fe58",
+      "bytes": 23010,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_inverse_refine.hpp",
+      "sha256": "edb8198695b6f69bbfb7e132cf37953968bb2452b3649084d6e829a1ce874586",
+      "bytes": 5222,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_pointer_utils.hpp",
+      "sha256": "4451a70c74e9c83869ca23e5360c5d1e222a070e5a24ad287035697c6d965b5e",
+      "bytes": 2398,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/batch_register_rows.hpp",
+      "sha256": "095ef70a646f3c36cb7cada755395c2c0a051ece9286b4eb6ca520d04eddfee8",
+      "bytes": 5944,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/cube_internal.h",
+      "sha256": "04a74fed3c232da6a556bcd97986635224afc29e6f7b9ace016453aa4a18ca5b",
+      "bytes": 1181,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/cube_kernel.cpp",
+      "sha256": "1589a7c0f8fb3ede7e809aa8727a7260840a526abc851a6743bc92e0573963fd",
+      "bytes": 4914,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/factor_blocked.cpp",
+      "sha256": "6b2a974a48d0aa0d22ea1475a35d5b1e0f7a13fe8b508a48059ee77c3f676ee9",
+      "bytes": 10200,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/factor_host.cpp",
+      "sha256": "c14bd2a41c5f1ddb99d7741e3f1f2111ec32d82ff598e04de56916b7b343944d",
+      "bytes": 3081,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/factor_internal.h",
+      "sha256": "b5ace38cbea23fa2dbe474a838ae9ac7397e7215496bf6ae75a8885f5a7e87bd",
+      "bytes": 1459,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/factor_kernel.cpp",
+      "sha256": "49c017a25fe3d47965cb80531faedefb6adaf4fa4ec777b9483b56af5a3492c6",
+      "bytes": 17971,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/factor_wide.hpp",
+      "sha256": "1ffe390cb9d297787409b1082ead39b0ee3329aea95259f2743739726d4966a5",
+      "bytes": 12224,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/getri_diagonal_vector.hpp",
+      "sha256": "9bd6306433caff6ca4c708bb8f4674663339e9c19cb16810615e479543ff475b",
+      "bytes": 6881,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/getri_host.cpp",
+      "sha256": "86dcd49cf3d71b4adfeaa01204e0e5127486f744103e4ba0cdb7b94c7449c12d",
+      "bytes": 2568,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/getri_internal.h",
+      "sha256": "43df145180ea61f9476148b0f6edbd410f347ff37fffb766571fcda9c38e9cec",
+      "bytes": 995,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/getri_kernel.cpp",
+      "sha256": "5af78f8de88a8c49d4ee5288c2aea2438a351bb77931b3f342f1fad7a41687f0",
+      "bytes": 19079,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/getri_large.cpp",
+      "sha256": "a779ed7efb652f2f8ae6d33b39576af8885e46afacd1dc7b519cec00aaaef295",
+      "bytes": 23811,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/info_kernel.cpp",
+      "sha256": "a723165970d6de44044b97821aea9859aeb34799a9e4f78c0cb06f9ed4bd0070",
+      "bytes": 1716,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/launch_internal.h",
+      "sha256": "ee53eb2a537a17a4845880d9eaae45da80fe04816c5bbea09a8275e2c4960b8c",
+      "bytes": 3221,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/lu950_internal.h",
+      "sha256": "1d0a977011f589545899bcad0aca89fa744f129559804c7630cf82a965d39a07",
+      "bytes": 1247,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/lu_math.hpp",
+      "sha256": "11f77c2246d9b027a39a3bb76d49dfa80c6b9c63c0a9b550a8fd00b9d13f20bd",
+      "bytes": 6870,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/matinv_batch.hpp",
+      "sha256": "e8f7d06936df7f5b71f4f69147d6d5ab1e2814a36a9a378e7b163a02e974c2f6",
+      "bytes": 9748,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/matinv_contract.hpp",
+      "sha256": "db2be652ffdff5c74b8f5f74d24e78f86c700f2c756c2ddb53d940f856ba10df",
+      "bytes": 1353,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/matinv_host.cpp",
+      "sha256": "f44a8f3064d5f79b5ee3b0d36795ebe061bcb0411b6c4ecdcb25d998c61949aa",
+      "bytes": 2624,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/arch35/matinv_kernel.cpp",
+      "sha256": "e229a457888f14c54fd5a8cc465b3f9fbaebc3c0230385250837e9856b050b04",
+      "bytes": 11782,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/lu_real_batched_host.cpp",
+      "sha256": "7cc8d7808cb4369618aacc0c8bd807a5f1a5c0f2b8cc1656ed192c7ba044b9fa",
+      "bytes": 4030,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/lu_real/lu_real_host.hpp",
+      "sha256": "47c19d1036def9e35269ed189676c8957a406407d5cdcdb2eeb701c33087ee38",
+      "bytes": 3791,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/sgetrf/sgetrf_host.cpp",
+      "sha256": "b8737ae87c8569c1b7aa49ee3634476fd0732c06b4641c5a50773be6e563eeb3",
+      "bytes": 3363,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/sgetri/sgetri_host.cpp",
+      "sha256": "3cbea9f5cb2cf5b7b1610cff133dc3c98d90473be85242ebe1a628a71e5b653b",
+      "bytes": 3204,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/utils/aclsolver_auxiliary.cpp",
+      "sha256": "f12b9b1f1fcf2598722000e2ecc071590f0b767bb4e8a279e4be52f108668193",
+      "bytes": 4688,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "src/utils/aclsolver_handle_internal.h",
+      "sha256": "3d7cfc981d334003412a42282d4c29cffa40bc5a42f870bea579db88f0bb9c24",
+      "bytes": 1604,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/README.md",
+      "sha256": "eb1cdb8be2c291dc2928a4b3211ffbdf27458240e1bb7cd68909aa1548271595",
+      "bytes": 7128,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/analyze_batch_files.py",
+      "sha256": "4d3fbce14f5dde0d63d950f69c76817a753bc1b546cda9c91667928e89e2e795",
+      "bytes": 10200,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/analyze_profile_windows.py",
+      "sha256": "44fd1c60ab6736d3ec8bf175423765b9c2b3ee425cf87801ffd2bfce75eaffc2",
+      "bytes": 9317,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/cache_introspection.cpp",
+      "sha256": "97f496c61e8c6f43480d0f9e88b5ed750f035be48b35cd64bf6fc399dcdf33ed",
+      "bytes": 1795,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/cases/cases_sgetrf.json",
+      "sha256": "cb8f96a00fcee8f379e0dbb178147e0931eb3617fd299674b756ff995dcd383e",
+      "bytes": 45997,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/cases/cases_sgetri.json",
+      "sha256": "8f6a7bf03c6eb33a61d7213f62227b12fcacef660e69f7a0492158d8a298a121",
+      "bytes": 54458,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/cases/cases_sgetribatched.json",
+      "sha256": "829e552935442e7044a7e134e0ca570197ca763909498e7be61ded6fc0b39621",
+      "bytes": 43962,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/cases/cases_smatinvbatched.json",
+      "sha256": "4f9bc8c827d90aa9c84e5b695fbe7d0f62f8db972000aca5d9c114165b4784dc",
+      "bytes": 61890,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/cases/provenance.json",
+      "sha256": "efe98d6ff36c8fe544c1b7419d4144d15bfb3f189adee3ef090799bff5c380fd",
+      "bytes": 2292,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/cases/regression_raw10_status.json",
+      "sha256": "b31ed78f791d8aa3233cf8529c43ddd43cb503d6a98307e17df12bd5fddeef05",
+      "bytes": 2111,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/profile_with_summary.py",
+      "sha256": "c2f6aa0837244be29296bba1badefc11454d70614bbdb12688c1d7464d8bd22f",
+      "bytes": 2262,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/reference_bridge.cpp",
+      "sha256": "f3141f764cf32416548358683762b702b3df81e9a19c6f155cb651b6962a4a12",
+      "bytes": 2466,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/run_acceptance.py",
+      "sha256": "bbebec544afe4d6ad3fc3b083239d188a21a7b33d6ac652d0b813b48b93cf90a",
+      "bytes": 9301,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate.py",
+      "sha256": "484024a723b9b428af3b8e028a9c5bdcc20acf600fac33e038d5261f055bbd83",
+      "bytes": 15248,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_batch.py",
+      "sha256": "9d3f641889f10773203f92ea2d16437b670b461ed03f0fe341d5ee66450ff623",
+      "bytes": 15042,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_medium_boundary.py",
+      "sha256": "bd79e871ae68f2d53da234f0b24fbdd1fc8ef1a8ea189fb6ed013ce46df19ec0",
+      "bytes": 6511,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_memory.py",
+      "sha256": "dbf92de91e420cb8cd6195f76ae825b6104ac4767a51c80e8a5e58f4d91af794",
+      "bytes": 11340,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_raw_boundary.py",
+      "sha256": "cc5c5d27c2b72be43f3f7bbf9210e9e014182c20056c5f0da8a3086960b5d42e",
+      "bytes": 8808,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_semantics.py",
+      "sha256": "6dbf28da7d3f4bd018f9a32d9d585c3d86c153fd83b60924e3e0a60f4eb0b547",
+      "bytes": 13410,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_small_boundary.py",
+      "sha256": "0c679399a377bbe8606581b2802ae09d82cb7866bd3a921af019dadbd5ca6f61",
+      "bytes": 3676,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_supplemental.py",
+      "sha256": "a5dad4888927bc3f220c2923518931e4dc1f82212fe459f57dfd5a1737c88fc2",
+      "bytes": 13753,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/lu_real/validate_workspace_poison.py",
+      "sha256": "3fd3f470205d16d67f9f0b1b5d751f87185d2104348b301db16b8ce8de933f90",
+      "bytes": 3779,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/sgetrf/CMakeLists.txt",
+      "sha256": "8e69cba014511467c700b0dd5a136d475a239de33cb09db28cb2ed9cdfcb5b8f",
+      "bytes": 1491,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/sgetrf/README.md",
+      "sha256": "8663a709815e4058aec8a0c3c88a0d65d133d83158fa32a80e3321e2dd851cf4",
+      "bytes": 1693,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/sgetrf/sgetrf_subnormal_pivot_test.cpp",
+      "sha256": "923b297d26e2e10d4dc3d120329ed3bcec647e7df31cb3397f23cf595666d5d4",
+      "bytes": 5289,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/sgetrf/sgetrf_test.cpp",
+      "sha256": "819bbfeb31ae4add2ec9e7c84ffb16969e1f6eaaa71a893a8eab3dddc495d405",
+      "bytes": 3195,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/sgetri/CMakeLists.txt",
+      "sha256": "03463873e29ab48be0e70777c9d47c155464b5286c34e652392a77fac14a8730",
+      "bytes": 1139,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/sgetri/README.md",
+      "sha256": "a89e1eedf0d53757ecc76821a488cba0030e8e42081acc5ab15a841ad1c87195",
+      "bytes": 1675,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/sgetri/sgetri_test.cpp",
+      "sha256": "a3f56bd5fc719daf9e8714719484c34ac08cbdd70b2535e5ced879a32abd54b5",
+      "bytes": 2845,
+      "origin": "local working-tree contribution file"
+    },
+    {
+      "path": "test/utils/real_solver_test.h",
+      "sha256": "78074a18ca54b2eed465269f023cfc1f6dc2af617eec64c99e978a06f5bf665d",
+      "bytes": 4698,
+      "origin": "local working-tree contribution file"
+    }
+  ]
+}
