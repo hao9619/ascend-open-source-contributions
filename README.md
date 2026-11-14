@@ -10,7 +10,7 @@
   <img src="https://img.shields.io/badge/CMake-343434?style=flat-square&amp;logo=cmake&amp;logoColor=white" alt="CMake" />
 </p>
 
-本人在昇腾社区完成的五项开发工作，覆盖并行容器、数学库和 Triton 工具支持。
+本人在昇腾社区完成的六项开发工作，覆盖并行容器、数学库、Triton 工具支持和模型推理优化。
 
 [项目](#项目总览) / [实现](#技术贡献) / [测试结果](#验证与性能) / [上游 PR](#社区记录)
 
@@ -25,6 +25,7 @@
 | 数值计算 | **[Complex TRMM](projects/ctrmm-a2a3/README.md)** | 复数三角矩阵乘法；A2 / A3 适配与精度修复 | Ascend 910B2 / A3 |
 | 数值计算 | **[Grouped Batched GEMM](projects/sgemm-grouped-batched/README.md)** | FP32 分组批量矩阵乘法；混合规模调度与性能优化 | Ascend 910B2 / A3 |
 | 开发工具 | **[MemScope × Triton](projects/memscope-triton/README.md)** | Triton 调用、显存参数及静态读写信息采集 | Ascend 910B3 |
+| 模型推理 | **[Wan2.2-I2V](projects/wan2.2-i2v/README.md)** | TaylorSeer 去噪缓存、Host 卸载与异步预取 | Ascend A3 |
 
 每项详情包含实现入口、测试入口、版本说明和源码校验清单。归档为贡献文件快照，完整构建依赖对应上游工程；详见[贡献与来源说明](CONTRIBUTIONS.md)。
 
@@ -80,6 +81,16 @@
 
 `Triton` · `Python / C++` · `可观测性` · `静态数据流分析`
 
+### 06 · Wan2.2-I2V
+
+**在 Ascend A3 上优化 Wan2.2 图生视频推理。**
+
+- 接入 TaylorSeer，使用历史特征预测部分去噪步的输出。
+- 将缓存卸载到 Host，并在独立拷贝流预取，验证资源清理与中断后的请求恢复。
+- 针对旧三阶配置的质量退化问题，将默认配置调整为一阶并重新自验。
+
+`PyTorch / TorchNPU` · `Diffusion Transformer` · `TaylorSeer`
+
 ## 验证与性能
 
 以下为**指定历史版本的开发者自测摘要**，用于展示工程验证范围。不同项目的用例、硬件和计时方式不同，不作横向排名；这些结果也不等同于最新源码全量通过或官方验收结论。
@@ -91,6 +102,7 @@
 | CTRMM · `v36` | A2 / A3 各 1,000 项功能精度测试及 200 项性能测试通过 | 性能输入的附加精度检查有历史失败；后续修复版另做定向验证，不能写成所有输入全通过 |
 | Grouped GEMM · `v41` | A2 / A3 各 1,973 项功能测试通过，200/200 项性能达到配套门槛 | A2 实测型号为 910B2；不同设备构建与证据分别保存 |
 | MemScope Triton · 2026-10-07 | 85 项相关 C++ 测试、44 个基础 NPU 用例及补充采集验证 | 保留上游 CPU 测试失败的基线对照；静态读写与 Host 时间戳均有明确支持边界 |
+| Wan2.2-I2V · 2026-11-03 一阶修复 | A3 同机测试中，完整组合的平均生成耗时从 231.014 秒降至 109.375 秒，下降 52.65% | 单组固定输入，预热后每档 3 次，计时不含模型加载与视频落盘 |
 
 <details>
 <summary><strong>如何解读这些结果</strong></summary>
@@ -112,6 +124,7 @@
 | LU | [ops-solver · PR #106](https://gitcode.com/cann/ops-solver/pull/106) | [设计 PR #2269](https://gitcode.com/cann/cann-ops-competitions/pull/2269) |
 | CTRMM | [ops-blas · PR #599](https://gitcode.com/cann/ops-blas/pull/599) | [设计 PR #2008](https://gitcode.com/cann/cann-ops-competitions/pull/2008) |
 | Grouped GEMM | [ops-blas](https://gitcode.com/cann/ops-blas) | [设计 PR #2067](https://gitcode.com/cann/cann-ops-competitions/pull/2067) |
+| Wan2.2-I2V | [cann-recipes-infer · PR #1073](https://gitcode.com/cann/cann-recipes-infer/pull/1073) | [设计 PR #2239](https://gitcode.com/cann/cann-ops-competitions/pull/2239) |
 
 MemScope Triton 的贡献范围见上文；未在此列出尚未核实的公开 PR 链接。
 
