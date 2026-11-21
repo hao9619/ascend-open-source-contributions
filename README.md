@@ -1,56 +1,75 @@
 <p align="center">
-  <img src="assets/cgemm3m-cover.webp" width="100%" alt="两幅矩阵格网经三条乘积路径，合成为一幅复数矩阵的概念插画">
+  <img src="assets/cgemm3m-cover.webp" width="100%" alt="两幅复数矩阵格网，经三条实数乘积路径合成为输出矩阵">
 </p>
 
-<h1 align="center">aclblasCgemm3m</h1>
-<p align="center"><strong>在昇腾 Atlas 950PR 上，用三次实数矩阵乘法计算复数矩阵乘积。</strong></p>
-
+<h1 align="center">为华为昇腾实现复数矩阵乘法</h1>
+<p align="center"><strong>aclblasCgemm3m</strong> · 从三乘法公式到 Atlas 950PR 上的 Ascend C 内核</p>
 <p align="center">
-  <a href="https://gitcode.com/cann/ops-blas/pull/735"><img alt="上游 PR 735 已合入" src="https://img.shields.io/badge/PR_%23735-Merged-7654A8?style=flat-square"></a>
+  <a href="https://gitcode.com/cann/ops-blas/pull/735"><img alt="PR 735 已合入" src="https://img.shields.io/badge/PR_%23735-Merged-7654A8?style=flat-square"></a>
   <img alt="目标硬件 Atlas 950PR" src="https://img.shields.io/badge/Atlas-950PR-117F82?style=flat-square">
-  <img alt="开发套件 CANN 9.1.0" src="https://img.shields.io/badge/CANN-9.1.0-344B72?style=flat-square">
+  <img alt="工具链 CANN 9.1.0" src="https://img.shields.io/badge/CANN-9.1.0-344B72?style=flat-square">
   <img alt="数据类型 complex64" src="https://img.shields.io/badge/BLAS-complex64-A25031?style=flat-square">
 </p>
-
 <p align="center">
-  <a href="https://gitcode.com/cann/ops-blas/pull/735"><b>上游 PR ↗</b></a> ·
-  <a href="https://gitcode.com/cann/cann-ops-competitions/pull/2506">设计算法与接口 ↗</a> ·
-  <a href="https://gitcode.com/gzh1630/ops-blas/blob/a2626f23ec202b1f8bdd3d637cae8dbf6b7decb8/blas/gemm/arch35/cgemm3m_host.cpp">阅读实现 ↗</a>
+  <a href="ops-blas/blas/gemm/arch35/cgemm3m_host.cpp"><b>读算子源码</b></a> ·
+  <a href="ops-blas/test/gemm/cgemm3m">看配套测试</a> ·
+  <a href="https://gitcode.com/cann/cann-ops-competitions/pull/2506">设计文档</a> ·
+  <a href="https://gitcode.com/cann/ops-blas/pull/735">上游合入记录 ↗</a>
 </p>
 
-2026 年 11 月 21 日，华为昇腾 CANN 社区将这项贡献合入了 `cann/ops-blas`。新增的 BLAS 接口计算 **C ← α·op(A)·op(B) + β·C**，支持列主序 `complex64` 矩阵。A 和 B 均可独立选择原矩阵、转置或共轭转置。
+## 项目背景 · 华为昇腾与 CANN
 
-## 为什么三次乘法就够了？
+<a href="https://github.com/Ascend"><img src="assets/ascend-org-avatar.png" align="right" width="64" alt="Huawei Ascend 官方 GitHub 组织标识"></a>
 
-先把操作后的矩阵写成 A = Ar + iAi、B = Br + iBi。按定义展开 AB，实部和虚部各需要两次实矩阵乘法。我们在非融合路径中复用前两个乘积，用一次额外的乘法同时取回两个交叉项。
+昇腾是华为的 AI 计算平台。CANN 是面向昇腾硬件的异构计算软件栈，其中的 **ops-blas** 提供矩阵乘法等基础线性代数运算，应用可以直接调用这些接口。我们参与的是 CANN 社区的一项算子开发任务，成果于 **2026 年 11 月 21 日**合入 `cann/ops-blas`。[CANN 项目介绍](https://www.hiascend.com/cann) · [ops-blas 官方仓库](https://gitcode.com/cann/ops-blas)
 
-| 第一次乘法 | 第二次乘法 | 第三次乘法 |
+## 社区任务 · 让 Atlas 950PR 支持 Cgemm3m
+
+给定两个复数矩阵 A、B，以及原有的输出矩阵 C，调用者希望用一次 BLAS 调用完成 **C ← α·op(A)·op(B) + β·C**。A 和 B 各自可以保持原样、转置或共轭转置。接口需要支持全部九种组合，并正确处理列主序存储与前导维。
+
+名字里的 **3m** 点出了实现约束。普通复数乘法展开后有四项实数乘积，这个算子要用**三次实数矩阵乘法**算出同一个复数矩阵乘积。交付时还要在真机上对照参考库检查精度、验证同输入双跑确定性，并用设备计时与任务给定的 GPU 基线比较性能。[昇腾社区任务](https://www.hiascend.com/activities/task-center/details/b6f3238e73084a0ebba5bbfc1312cdf8?menu=tasks) · [接口声明](ops-blas/include/cann_ops_blas.h)
+
+## 开发思路 · 从三次乘法到设备内核
+
+**先把第四次乘法省下来。** 把操作后的输入写成 A = Ar + iAi、B = Br + iBi。直接展开时，虚部需要分别计算 Ar × Bi 和 Ai × Br。如果先把实部和虚部相加再相乘，就能一次取回这两个交叉项。非融合路径用到的三个实矩阵乘积如下。
+
+| P₀ | P₁ | P₂ |
 | :---: | :---: | :---: |
-| P₀ = Ar × Br | P₁ = Ai × Bi | P₂ = (Ar + Ai) × (Br + Bi) |
+| Ar × Br | Ai × Bi | (Ar + Ai) × (Br + Bi) |
 
-此时 **Re(AB) = P₀ − P₁**，**Im(AB) = P₂ − P₀ − P₁**。最后再应用复数标量 α 和 β。少做一次矩阵乘法的代价，是多做输入加法、保存中间结果，并承担加减顺序改变带来的浮点舍入误差。这三点决定了内核的设计。
+由此得到 **Re(AB) = P₀ − P₁** 和 **Im(AB) = P₂ − P₀ − P₁**，再应用 α 和 β。省下的乘法换来了额外的加减和中间结果，实际速度取决于这些数据在哪里算、搬运多少次。
 
-## 从公式到 Ascend C 内核
+**再按形状分配工作。** 我们复用已有 Cgemm 的计算内核。在适合融合的形状上，输入按面板送入片上缓冲，三个乘积采用另一组等价分解，在片上合并结果。非融合路径则联合选择输出块大小和 K 方向的 1～4 个分区，以便在输出块较少、点积很长时仍能让多个核心分担计算。[调度实现](ops-blas/blas/gemm/arch35/cgemm_host.cpp) · [两条路径的完整公式](ops-blas/blas/gemm/README.md)
 
-- **让中间结果尽量留在片上。** 我们复用已有 Cgemm 的计算组件。对适合融合的形状，按面板准备输入，在片上执行三乘积；融合分解采用 P₀ = (Ar + Ai) × Br、P₁ = Ar × (Bi − Br)、P₂ = Ai × (Br + Bi)，以 P₀ − P₂ 和 P₀ + P₁ 分别得到实部和虚部，减少全局工作区的读写。
-- **让矩阵形状决定怎么分工。** 输出能切出足够多的块时，各核心可以并行计算不同输出块。输出块少而 K 很长时，非融合路径会联合选择输出块大小和 K 方向的 1～4 个分区，在核心利用率和部分和的搬运成本之间取舍。
-- **单独处理舍入敏感的输出。** 两种分解在实数算术下等价，FP32 的累加顺序却会改变低位。针对特定的大方阵路径，我们分段累加并记录部分和，对需要纠正的位置按固定顺序重算，再用 Netlib 参考结果检查精度，用同输入双跑检查确定性。
+**最后处理 FP32 舍入。** 代数等价的表达式，在长点积中可能得到不同的浮点低位。对于满足条件的 2048～4096 阶连续方阵，我们分段累加，保留部分和，再筛出对舍入敏感的位置，按固定顺序重算。这样可以把额外的计算集中在需要纠正的输出上。[舍入纠正内核](ops-blas/blas/gemm/arch35/cgemm3m_rounding_kernel.cpp)
 
 ## 真机验证
 
-下表来自 2026 年 11 月 9 日的 **Atlas 950PR** 自测。实测源码为 `0f8c125` 加两处测试框架 SDK 兼容补丁，环境为 CANN 9.1.0，参考库为 Netlib BLAS/CBLAS 3.10.0。合入时的 PR 源分支提交为 `a2626f23`。[实测证据附件](https://gitcode.com/cann/ops-blas/pull/735?did=42c2afae0d665e6e0ce90e42d345bb20eaf574a6#tid-199509752)
+以下结果来自 **2026 年 11 月 9 日**同一构建产物的自测。设备为 Atlas 950PR，工具链为 CANN 9.1.0，参考库为 Netlib BLAS/CBLAS 3.10.0。实测版本为 `0f8c125` 加两处测试框架 SDK 兼容补丁，本仓收录的源码对应合入时的 PR 源提交 `a2626f23`。[实测记录与原始附件](https://gitcode.com/cann/ops-blas/pull/735?did=42c2afae0d665e6e0ce90e42d345bb20eaf574a6#tid-199509752)
 
-| 自测项目 | 结果 | 测了什么 |
+| 检查项 | 结果 | 判据或观察 |
 | :--- | :---: | :--- |
-| Cgemm3m 全量测试 | **1208 / 1208** | 检查参考精度，适用用例用相同输入运行两次，逐字节比对输出 |
-| 已有 Cgemm 回归 | **51 / 51** | 在同一构建产物上检查共享实现影响到的既有接口 |
-| 正式性能用例 | **200 / 200** | GPU 基线耗时 ÷ NPU 耗时，单项最低 **0.41465**，平均 **0.63542** |
-| 内存快速检查 | **11 / 12 组通过** | ED 组出现 5 项数值断言失败和一条 8 字节 GM 写告警，本轮未定位根因 |
+| Cgemm3m 全量精度 | **1208 / 1208** | 对照参考结果，适用用例以相同输入双跑，逐字节比较输出 |
+| 原 Cgemm 接口回归 | **51 / 51** | 验证本次改动涉及的共享计算路径 |
+| 正式性能 | **200 / 200** | GPU 基线耗时 ÷ NPU 耗时，单项最低 **0.41465**，平均 **0.63542** |
+| 内存快速检查 | **11 / 12 组通过** | ED 组有 5 项数值断言失败和 1 条 8 字节 GM 写告警，本轮未定位根因 |
 
-性能用例各预热 5 次，再用 msprof 记录 10 个有效样本；先对一次调用涉及的各 kernel 耗时求和，再对 10 次取算术平均。任务门槛是单项倍率至少 0.4、全部用例平均倍率至少 0.5。
+性能用例各预热 5 次，再用 msprof 采集 10 次。一次调用涉及多个 kernel 时，先将这些 kernel 的设备耗时相加，再对 10 个样本取算术平均。任务要求每个用例的倍率至少为 0.4，全部用例的平均倍率至少为 0.5。
+
+## 源码与复现
+
+本仓的 `ops-blas/` 保留了 PR 的全部 26 个变更文件、两个相关的共享内核头文件及上游许可证，目录结构与上游一致。阅读时可以从接口入口跟进调度和内核；实际编译需要完整的 ops-blas 工程和对应的 CANN 开发环境。
+
+| 想看什么 | 从这里开始 |
+| :--- | :--- |
+| 公共接口如何进入共享计算路径 | [Cgemm3m 入口](ops-blas/blas/gemm/arch35/cgemm3m_host.cpp) → [共享调度](ops-blas/blas/gemm/arch35/cgemm_host.cpp) |
+| 输入拆分、乘积计算和结果合并 | [输入预处理](ops-blas/blas/gemm/arch35/cgemm_kernel.cpp) → [乘积计算](ops-blas/blas/gemm/arch35/cgemm_compute_kernel.cpp) → [输出合并](ops-blas/blas/gemm/arch35/cgemm_epilogue_kernel.cpp) |
+| 怎样构建、运行用例、比较结果 | [完整固定版本](https://gitcode.com/gzh1630/ops-blas/tree/a2626f23ec202b1f8bdd3d637cae8dbf6b7decb8) · [构建与测试说明](ops-blas/test/gemm/cgemm3m/README.md) · [测试用例](ops-blas/test/gemm/cgemm3m/arch35/cgemm3m_test.csv) |
+
+上游源码和测试适用随附的 CANN Open Software License Agreement 2.0。[上游许可证](ops-blas/LICENSE) · [贡献范围与来源](CONTRIBUTIONS.md)
 
 ## 致谢
 
 谢谢把 GitCode 账号 **gzh1630** 借给我提交这次贡献的朋友。很高兴能和你分享代码合入的这一刻。
 
-感谢华为昇腾 CANN 社区的维护者和评审同学。从追问两条路径各自用了哪组三乘积公式，到逐项核对真机日志、帮助排查 CI，你们的反馈让实现更容易读懂，也让后来的开发者能沿着记录复核结果。
+感谢华为昇腾 CANN 社区的维护者和评审同学。你们追问了两条计算路径各自使用的公式，逐项核对了真机记录，也在 CI 排查中提供了帮助。这些具体的反馈，让今天读到这份代码的人既能看懂算法，也能找到支撑结论的测试证据。
